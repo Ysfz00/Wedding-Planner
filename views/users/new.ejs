@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .data-form {
+      width: 300px;
+      margin: 0 auto;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="data-form">
+    <form action="/users/create" method="POST">
+      <h2>Create Your Profile!</h2>
+      <label for="inputFirstName">First Name</label>
+      <input type="text" name="first" id="inputFirstName" placeholder="First" autofocus required/>
+      <label for="inputLastName">Last Name</label>
+      <input type="text" name="last" id="inputLastName" placeholder="Last" />
+      <label for="inputPassword">Password</label>
+      <input type="password" name="password" id="inputPassword" placeholder="Password" required/>
+      <label for="inputEmail">Email address</label>
+      <input type="email" name="email" id="inputEmail" placeholder="Email address" required/>
+      <label for="inputZipCode">Zip Code</label>
+      <input type="text" name="zipCode" id="inputZipCode" pattern="\d*" placeholder="Zip Code" required/>
+      <button type="submit">Create Account</button>
+    </form>
+  </div>
+</body>
+
+</html>

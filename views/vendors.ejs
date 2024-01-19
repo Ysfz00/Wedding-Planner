@@ -1,0 +1,59 @@
+<div class="container">
+  <div class="col-sm-6 mt-5">
+
+    <div class="card p-3 mb-3">
+      <h3>Find Your Perfect Vendor</h3>
+      <p>Choose the type of service and city to find the perfect vendor for your needs.</p>
+      <div class="row">
+        <div class="col-sm-6">
+          <label for="vendor-type">Vendor Type:</label>
+          <select name="vendor-type" id="vendor-type" class="form-select">
+            <option value="All" <%= selectedVendorType === 'All' ? 'selected' : '' %>>All</option>
+            <option value="Photographer" <%= selectedVendorType === 'Photographer' ? 'selected' : '' %>>Photographer</option>
+            <option value="Light and Sound" <%= selectedVendorType === 'Light and Sound' ? 'selected' : '' %>>Light and Sound</option>
+            <option value="Car Rental" <%= selectedVendorType === 'Car Rental' ? 'selected' : '' %>>Car Rental</option>
+          </select>
+        </div>
+        <div class="col-sm-6">
+          <label for="city">City:</label>
+          <select name="city" id="city" class="form-select">
+            <option value="All" <%= selectedCity === 'All' ? 'selected' : '' %>>All</option>
+            <option value="Berlin" <%= selectedCity === 'Berlin' ? 'selected' : '' %>>Berlin</option>
+            <option value="Hamburg" <%= selectedCity === 'Hamburg' ? 'selected' : '' %>>Hamburg</option>
+            <option value="Munich" <%= selectedCity === 'Munich' ? 'selected' : '' %>>Munich</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <% offeredVendors.forEach(vendor=> { %>
+      <div>
+        <h2>
+          <%= vendor.vendorName %>
+        </h2>
+        <p>
+          <%= vendor.description %>
+        </p>
+        <p>Contact information:</p>
+        <p>Email: <%= vendor.contact.email %>
+        </p>
+        <p>Phone: <%= vendor.contact.phone %>
+        </p>
+        <p>Website: <a href="<%= vendor.contact.website %>">
+            <%= vendor.contact.website %>
+          </a></p>
+        <p>Address: <%= vendor.contact.address %>
+        </p>
+        <p>City: <%= vendor.contact.city %>
+        </p>
+        <p>Zip Code: <%= vendor.contact.zipCode %>
+        </p>
+        <p>Cost: €<%= vendor.cost %>
+        </p>
+      </div>
+      <hr>
+    <% }); %>
+  </div>
+</div>

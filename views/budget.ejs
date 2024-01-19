@@ -1,0 +1,40 @@
+<div class="container">
+    <h1 class="mt-5">Budget Tracker</h1>
+    <p class="lead">Track your wedding budget here.</p>
+
+    <!-- Budget tracker form -->
+    <form id="budget-form">
+        <label for="venue">Venue (€):</label><br>
+        <input type="number" id="venue" name="venue" value="0" min="0" required><br>
+        <label for="food">Food (€):</label><br>
+        <input type="number" id="food" name="food" value="0" min="0" required><br>
+        <label for="decorations">Decorations (€):</label><br>
+        <input type="number" id="decorations" name="decorations" value="0" min="0" required><br>
+        <label for="clothing">Clothing (€):</label><br>
+        <input type="number" id="clothing" name="clothing" value="0" min="0" required><br>
+        <input type="submit" value="Calculate Budget">
+    </form>
+
+    <!-- Display for total budget -->
+    <h2>Total Budget: €<span id="total-budget">0</span></h2>
+</div>
+
+<!-- JavaScript to handle the form submission and budget calculation -->
+<script>
+    document.getElementById('budget-form').addEventListener('submit', function(event) {
+        // Prevent the form from submitting normally
+        event.preventDefault();
+
+        // Get the values from the input fields
+        var venue = parseInt(document.getElementById('venue').value, 10);
+        var food = parseInt(document.getElementById('food').value, 10);
+        var decorations = parseInt(document.getElementById('decorations').value, 10);
+        var clothing = parseInt(document.getElementById('clothing').value, 10);
+
+        // Calculate the total budget
+        var total = venue + food + decorations + clothing;
+
+        // Display the total budget
+        document.getElementById('total-budget').innerText = total;
+    });
+</script>

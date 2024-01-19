@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="col-sm-6 mt-5">
+
+    <div class="card p-3 mb-3">
+      <h3>Find Your Perfect Venue</h3>
+      <p>Select the city to discover the best venues for your special day.</p>
+      <div class="row">
+        <div class="col-sm-12">
+          <label for="city">City:</label>
+          <select name="city" id="city" class="form-select">
+            <option value="">All</option>
+            <option value="Berlin" <%= selectedCity === "Berlin" ? "selected" : "" %>>Berlin</option>
+            <option value="Hamburg" <%= selectedCity === "Hamburg" ? "selected" : "" %>>Hamburg</option>
+            <option value="Munich" <%= selectedCity === "Munich" ? "selected" : "" %>>Munich</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <% offeredVenues.forEach(venue => { %>
+      <div>
+        <h2><%= venue.venueName %></h2>
+        <p><%= venue.description %></p>
+        <p>Contact information:</p>
+        <p>Phone: <%= venue.contact.phone %></p>
+        <p>Website: <a href="<%= venue.contact.website %>"><%= venue.contact.website %></a></p>
+        <p>Address: <%= venue.contact.address %></p>
+        <p>Cost: €<%= venue.cost %></p>
+      </div>
+      <hr>
+    <% }); %>
+  </div>
+</div>

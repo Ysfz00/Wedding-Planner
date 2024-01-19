@@ -1,0 +1,28 @@
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 10px;
+    }
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>E-Mail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% contacts.forEach((c, index) => { %>
+        <tr>
+            <td><%= index + 1 %></td>
+            <td><%= c.name %></td>
+            <td><%= c.email %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

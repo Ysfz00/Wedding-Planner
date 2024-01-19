@@ -1,0 +1,13 @@
+{
+    "venueName": "Bavarian Beer Garden",
+    "description": "An outdoor venue located in the heart of Munich, perfect for casual weddings. Accommodates up to 300 guests.",
+    "contact": {
+        "phone": "+49 89 1234567",
+        "email": "info@bavarianbeergarden.de",
+        "website": "http://www.bavarianbeergarden.de",
+        "address": "Biergarten Street 50, Munich",
+        "zipCode": 80000,
+        "city": "Munich"
+    },
+    "cost": 15000
+}

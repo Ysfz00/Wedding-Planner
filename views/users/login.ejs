@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .data-form {
+      width: 300px;
+      margin: 0 auto;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="data-form">
+    <form action="/users/login" method="POST">
+        <h2>Login:</h2>
+        <label for="inputEmail">Email address</label>
+        <input type="email" name="email" id="inputEmail" placeholder="Email address" required>
+        <label for="inputPassword">Password</label>
+        <input type="password" name="password" id="inputPassword" placeholder="Password" required> <button
+            type="submit">Login</button>
+    </form>
+  </div>
+</body>
+
+</html>

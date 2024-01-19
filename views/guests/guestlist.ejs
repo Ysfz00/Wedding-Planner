@@ -1,0 +1,47 @@
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 10px;
+    }
+</style>
+
+<div class="container">
+        <h1 class="mt-5">Guestlist Manager</h1>
+        <p class="lead">Manage your weddinggg guest list here.</p>
+    
+        <!-- Form for adding guests -->
+        <h2>Add a Guest</h2>
+        <br>
+        <form action="/guestlist/add" method="post">
+            <input type="text" name="name" placeholder="Guest Name" required>
+            <input type="text" name="email" placeholder="Guest Email" required>
+            <input type="submit" value="Add Guest">
+        </form>
+        <br>
+    
+        <!-- Table that displays all the guests -->
+        <h2>All Guests</h2>
+        <br>
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% guests.forEach((guest, index) => { %>
+                    <tr>
+                        <td><%= index + 1 %></td>
+                        <td><%= guest.name %></td>
+                        <td><%= guest.email %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    </div>
+    

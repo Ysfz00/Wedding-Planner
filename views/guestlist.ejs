@@ -1,0 +1,66 @@
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 10px;
+    }
+</style>
+
+<div class="container">
+    <h1 class="mt-5">Guestlist Manager</h1>
+    <p class="lead">Manage your wedding guest list here.</p>
+
+    <!-- Form for adding guests -->
+    <div class="card p-3 mb-3">
+      <h2>Add a Guest</h2>
+      <br>
+      <form action="/guestlist/add" method="post">
+          <input type="text" name="fullName" placeholder="Full Name" required class="form-control mb-2">
+          <input type="text" name="phone" placeholder="Phone Number" class="form-control mb-2">
+          <select name="guestCategory" class="form-select mb-2">
+            <option value="Adult">Adult</option>
+            <option value="Kid">Kid</option>
+            <option value="Baby">Baby</option>
+          </select>
+          <select name="confirmed" class="form-select mb-2">
+            <option value="Confirmed">Confirmed</option>
+            <option value="Not confirmed">Not Confirmed</option>
+          </select>
+          <input type="submit" value="Add Guest" class="btn btn-primary">
+      </form>
+      <br>
+    </div>
+    
+       <!-- Table that displays all the guests -->
+    <h2>All Guests</h2>
+    <br>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Phone Number</th>
+            <th>Category</th>
+            <th>Confirmed</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% guests.forEach((guest, index) => { %>
+            <tr>
+              <td><%= index + 1 %></td>
+              <td><%= guest.fullName %></td>
+              <td><%= guest.phone %></td>
+              <td><%= guest.guestCategory %></td>
+              <td><%= guest.confirmed %></td>
+              <td>
+                <a href="/guestlist/edit/<%= guest._id %>">Edit</a> | 
+                <a href="/guestlist/delete/<%= guest._id %>">Delete</a>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>      
+</div>

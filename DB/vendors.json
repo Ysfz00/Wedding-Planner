@@ -1,0 +1,87 @@
+[
+    {
+      "vendorName": "Meyer's Photography",
+      "vendorType": "Photographer",
+      "description": "Experienced wedding photographers capturing your special day in a unique way.",
+      "contact": {
+        "email": "info@meyersphoto.com",
+        "phone": "030 12345678",
+        "website": "www.meyersphoto.com",
+        "address": "Alexanderplatz 1",
+        "zipCode": 10178,
+        "city": "Berlin"
+      },
+      "cost": 2000
+    },
+    {
+      "vendorName": "Foto Express Hamburg",
+      "vendorType": "Photographer",
+      "description": "We capture the beautiful moments of your wedding.",
+      "contact": {
+        "email": "contact@fotoexpresshh.de",
+        "phone": "040 12345678",
+        "website": "www.fotoexpresshh.de",
+        "address": "Jungfernstieg 1",
+        "zipCode": 20354,
+        "city": "Hamburg"
+      },
+      "cost": 1800
+    },
+    {
+      "vendorName": "Berlin Light & Sound",
+      "vendorType": "Light & Sound",
+      "description": "Best in class light and sound services for your wedding.",
+      "contact": {
+        "email": "info@berlinls.com",
+        "phone": "030 23456789",
+        "website": "www.berlinls.com",
+        "address": "Unter den Linden 1",
+        "zipCode": 10117,
+        "city": "Berlin"
+      },
+      "cost": 1500
+    },
+    {
+      "vendorName": "Hamburg Sound Company",
+      "vendorType": "Light & Sound",
+      "description": "Quality sound and light solutions for your big day.",
+      "contact": {
+        "email": "contact@hamburgsound.de",
+        "phone": "040 23456789",
+        "website": "www.hamburgsound.de",
+        "address": "Rathausmarkt 1",
+        "zipCode": 20095,
+        "city": "Hamburg"
+      },
+      "cost": 1300
+    },
+    {
+      "vendorName": "Berlin Luxury Cars",
+      "vendorType": "Car Rental",
+      "description": "We provide a range of high-end cars for your wedding day transport.",
+      "contact": {
+        "email": "info@berlinluxcars.com",
+        "phone": "030 34567890",
+        "website": "www.berlinluxcars.com",
+        "address": "Friedrichstraße 1",
+        "zipCode": 10117,
+        "city": "Berlin"
+      },
+      "cost": 800
+    },
+    {
+      "vendorName": "Hamburg Car Hire",
+      "vendorType": "Car Rental",
+      "description": "Comfortable and stylish cars for your wedding day.",
+      "contact": {
+        "email": "contact@hhcarhire.de",
+        "phone": "040 34567890",
+        "website": "www.hhcarhire.de",
+        "address": "Mönckebergstraße 1",
+        "zipCode": 20095,
+        "city": "Hamburg"
+      },
+      "cost": 700
+    }
+  ]
+  
